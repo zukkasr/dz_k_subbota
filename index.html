@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="reset.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -10,61 +11,123 @@
     <header>
         <img class="header__logo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/3840px-LEGO_logo.svg.png?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="lego">
         <div class="header__links">
-            <a href="">Вакансии</a>
-            <a href="">Работодатели</a>
+            <div><a href="">Вакансии</a></div>
+            <div><a href="">Работодатели</a></div> 
         </div>
         <button class="top-button">Опубликовать</button>
     </header>
     
     <section class="about">
-        <h1>Больше вакансий <br> в telegram-канале</h1>
-        <button class="about__btn">Перейти в ТГ канал</button>
+        <div><h1>Больше вакансий <br> в telegram-канале</h1></div>
+        <div><button class="about__btn">Перейти в ТГ канал</button></div>
     </section>
 
     <section class="info">
         <div class="info__form">
-            <input type="text" placeholder="Поиск" name="search">
-            <form>
+                <label class="search"><input type="search" placeholder="Поиск"></label>
+                <p>Формат</p>
                 <div class="form__group">
-                    <label>Формат</label>
-                    <button type="button" class="form__format">Парт-тайм</button>
-                    <button type="button" class="form__format">Фулл-тайм</button>
-                    <button type="button" class="form__format">Стажировка</button>
+                    <button class="form__format">Парт-тайм</button>
+                    <button class="form__format">Фулл-тайм</button>
+                    <button class="form__format">Стажировка</button>
                 </div>
-                <div class="form__group">
-                    <label>Формат</label>
+                <p>Формат</p>
+                <div class="form__group"> 
                     <button type="button" class="form__format">Офис</button>
                     <button type="button" class="form__format">Удаленно</button>
                     <button type="button" class="form__format">Гибрид</button>
                 </div>
+                <p>Грейд</p>
                 <div class="form__group">
-                    <label>Грейд</label>
                     <button type="button" class="form__format">Junior</button>
                     <button type="button" class="form__format">Middle</button>
                     <button type="button" class="form__format">Senior</button>
                     <button type="button" class="form__format">Lead</button>
                     <button type="button" class="form__format">Head</button>
                 </div>
-                <div class="form__group">
-                    <label>Локация</label>
-                    Москва<input type="checkbox" value="msc">
-                    Санкт-Петербург<input type="checkbox" value="spb">
-                    Казань<input type="checkbox" value="msc">
-                    Нижний Новгород<input type="checkbox" value="spb">
+                <p>Локация</p>
+                <div class="form__check">
+                    <label>Москва<input type="checkbox"></label>
+                    <label>Санкт-Петербург<input type="checkbox"></label>
+                    <label>Казань<input type="checkbox"></label>
+                    <label>Нижний Новгород<input type="checkbox"></label>
                 </div>
-
-                <div class="form__group">
-                    <label>Зарплата</label>
-                    <input type="number" placeholder="Минимум">
-                    <input type="number" placeholder="Максимум">
+                <p>Зарплата</p>
+                <div class="form__group">  
+                    <input type="text" placeholder="Минимум">
+                    <input type="text" placeholder="Максимум">
                 </div>
             </form>
         </div>
-
+        
         <div class="info__cards">
-
+            <div class="cards__row" id="row-1">
+                <div class="cards" id="card-1">
+                    <span>новая</span>
+                    <p><img src="https://cdn.insales-shop.ru/images/products/1/5593/2477938137/t-bank-logo-2025.png" alt="" class="card-logo">Т-банк</p>
+                    <h3>Художник <br> концепт-арта</h3>
+                    <p class="place">Москва, формат работы</p>
+                    <button class="form__format">280 000 ₽</button>
+                    <button class="form__format">Фулл-тайм</button>
+                    <button class="form__format">Junior</button>
+                </div>
+                <div class="cards" id="card-2">
+                    <span>новая</span>
+                    <p><img src="https://cdn.insales-shop.ru/images/products/1/5593/2477938137/t-bank-logo-2025.png" alt="" class="card-logo">Apple</p>
+                    <h3>UI/UX Дизайнер</h3>
+                    <p class="place">Москва, формат работы</p>
+                    <button class="form__format">280 000 ₽</button>
+                    <button class="form__format">Фулл-тайм</button>
+                    <button class="form__format">Junior</button>
+                </div>
+                <div class="cards" id="card-3">
+                    <p><img src="https://cdn.insales-shop.ru/images/products/1/5593/2477938137/t-bank-logo-2025.png" alt="" class="card-logo">ВТБ</p>
+                    <h3>Графический Дизайнер</h3>
+                    <p class="place">Москва, формат работы</p>
+                    <button class="form__format">280 000 ₽</button>
+                    <button class="form__format">Фулл-тайм</button>
+                    <button class="form__format">Junior</button>
+                </div>
+            </div>
+            <div class="cards__row" id="row-2">
+                <div class="cards" id="card-4">
+                    <p><img src="https://cdn.insales-shop.ru/images/products/1/5593/2477938137/t-bank-logo-2025.png" alt="" class="card-logo">Т-банк</p>
+                    <h3>Художник <br> концепт-арта</h3>
+                    <p class="place">Москва, формат работы</p>
+                    <button class="form__format">280 000 ₽</button>
+                    <button class="form__format">Фулл-тайм</button>
+                    <button class="form__format">Junior</button>
+                </div>
+                <div class="cards" id="card-5">
+                    <p><img src="https://cdn.insales-shop.ru/images/products/1/5593/2477938137/t-bank-logo-2025.png" alt="" class="card-logo">Apple</p>
+                    <h3>Дизайнер</h3>
+                    <p class="place">Москва, формат работы</p>
+                    <button class="form__format">280 000 ₽</button>
+                    <button class="form__format">Фулл-тайм</button>
+                    <button class="form__format">Junior</button>
+                </div>
+                <div class="cards" id="card-6">
+                    <p><img src="https://cdn.insales-shop.ru/images/products/1/5593/2477938137/t-bank-logo-2025.png" alt="" class="card-logo">ВТБ</p>
+                    <h3>Графический Дизайнер</h3>
+                    <p class="place">Москва, формат работы</p>
+                    <button class="form__format">280 000 ₽</button>
+                    <button class="form__format">Фулл-тайм</button>
+                    <button class="form__format">Junior</button>
+                </div>
+            </div>
         </div>
+
     </section>
+
+    <footer>
+        <button class="footer__button">Опубликовать вакансию</button>
+        <div class="footer__links">
+            <a href="">Вакансии</a>
+            <a href="">Работадателям</a>
+            <a href="">Telegram</a>
+            <a href="">Техподдержка</a>
+        </div>
+    </footer>
 
 
 </body>
